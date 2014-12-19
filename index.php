@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="styles/styles.css" type="text/css">
 <?php 
 	include("lib/loader.php");
 	include("inc/head.php"); 
