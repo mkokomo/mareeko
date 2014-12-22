@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="styles/styles.css" type="text/css">
 <?php 
 	include("lib/loader.php");
 	include("inc/head.php"); 
@@ -7,11 +6,15 @@
 //	echo $pin_count;
 	$pins = DB::query("SELECT * FROM pins");
 ?>
-<h1>pinspinspins</h1> 
-<?php 
-	foreach ($pins as $pin) {
-		echo $pin['name'];
-	}
-?>
+<article class="type-system-slab">
+	<h1>Look at all these cool things!</h1>
+	<h3><?php 
+		foreach ($pins as $pin) {
+			echo $pin['name'];
+			echo '<br /><img src="' . $pin['image'] . '" alt="' . $pin["name"] . 'width="250" height="250"' . '">';
+		}
+	?></h3><br />
+	<div class="button">this is one thing</div>
+</article>
 <?php
 	include("inc/footer.php"); 
